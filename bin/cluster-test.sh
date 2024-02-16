@@ -3,7 +3,7 @@ set -e
 
 export CHROMA_CLUSTER_TEST_ONLY=1
 export CHROMA_SERVER_HOST=localhost:8000
-export PULSAR_BROKER_URL=localhost:6650
+export PULSAR_BROKER_URL=localhost
 export CHROMA_COORDINATOR_HOST=localhost
 export CHROMA_SERVER_GRPC_PORT="50051"
 

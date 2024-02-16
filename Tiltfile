@@ -21,7 +21,7 @@ k8s_resource(
   labels=["infrastructure"]
 )
 k8s_yaml(['k8s/dev/pulsar.yaml'])
-k8s_resource('pulsar', resource_deps=['k8s_setup'], labels=["infrastructure"], port_forwards=6650)
+k8s_resource('pulsar', resource_deps=['k8s_setup'], labels=["infrastructure"], port_forwards=['6650:6650', '8080:8080'])
 k8s_yaml(['k8s/dev/server.yaml'])
 k8s_resource('server', resource_deps=['k8s_setup'],labels=["chroma"], port_forwards=8000 )
 k8s_yaml(['k8s/dev/coordinator.yaml'])
